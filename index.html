@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WORKSTATION</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="logo">WORKSTATION</header>
+  
+  <div class="dashboard-container">
+    <!-- Pomodoro Timer Section -->
+    <div class="timer-section">
+      <div class="container">
+        <h1 class="title">Pomodoro Timer</h1>
+        <hr />
+
+        <div class="mode-buttons">
+          <button data-mode="work" class="active">Work</button>
+          <button data-mode="short">Short Break</button>
+          <button data-mode="long">Long Break</button>
+        </div>
+
+        <div class="timer-container">
+          <svg class="progress-ring" width="200" height="200">
+            <circle class="progress-ring__background" stroke="#E5E5E5" stroke-width="8" fill="transparent" r="86" cx="100" cy="100"/>
+            <circle class="progress-ring__circle" stroke="#2EC4B6" stroke-width="8" fill="transparent" r="86" cx="100" cy="100" stroke-dasharray="540.35" stroke-dashoffset="0" transform="rotate(-90 100 100)"/>
+          </svg>
+          <p class="timer" id="timer">25:00</p>
+        </div>
+
+        <div class="button-wrapper">
+          <button id="start">Start</button>
+          <button id="stop">Stop</button>
+          <button id="reset">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <!-- Todo Section -->
+      <div class="todo-section">
+        <h1>Tasks</h1>
+        <div class="wrapper">
+          <form id="todo-form">
+            <input id="todo-input" type="text" placeholder="Write anything and hit enter to add" autocomplete="off" />
+            <button type="submit" id="add-button">ADD</button>
+          </form>
+          <ul id="todo-list"></ul>
+        </div>
+      </div>
+
+      <!-- Notes Section -->
+      <div class="notes-container">
+        <h1 class="notes-title">Notes</h1>
+        <textarea id="notes-textarea" placeholder="Jot down any distracting thoughts here..."></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- Instructions -->
+  <div class="instruction">
+    <h1>HOW TO USE WORKSTATION</h1>
+    <div class="instruction-steps">
+      <p>1. Note down all your tasks</p>
+      <p>2. Start the Pomodoro timer</p>
+      <p>3. After one Pomodoro session, have a short break</p>
+      <p>4. After three Pomodoro sessions, have a long break</p>
+      <p>5. During your work flow, if you have any distracting thoughts, jot them down in the notes area</p>
+    </div>
+  </div>
+<div class="footer-credit">
+  made with ❤️ by MANAS
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

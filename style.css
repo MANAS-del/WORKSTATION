@@ -1,0 +1,527 @@
+:root {
+      --background: #FFF8E7;
+      --primary-text: #1E1E2F;
+      --timer-ring: #FF9F1C;
+      --work-color: #2EC4B6;
+      --short-break-color: #FF9F1C;
+      --long-break-color: #9C6ADE;
+      --start-color: #2EC4B6;
+      --stop-color: #E63946;
+      --reset-color: #1A2A6C;
+      --task1-color: #00A896;
+      --task2-color: #FF9F1C;
+      --task3-color: #9C6ADE;
+      --add-button-color: #FF9F1C;
+      --placeholder-text: #707070;
+      --card-color: #ffffff;
+      --border-color: #E5E5E5;
+      --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.08);
+      --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background);
+      color: var(--primary-text);
+      line-height: 1.6;
+}
+
+.logo {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--primary-text);
+      letter-spacing: 2px;
+      margin: 2rem 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container {
+      display: flex;
+      gap: 3rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      min-height: calc(100vh - 200px);
+}
+
+.footer-credit {
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      color: #555;
+     text-align: left;
+     margin: 20px;
+}
+
+
+/* Timer Section */
+.timer-section {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.container {
+      background-color: var(--card-color);
+      border-radius: 24px;
+      padding: 3rem 2.5rem;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: var(--shadow-medium);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      border: 1px solid var(--border-color);
+}
+
+.title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary-text);
+      margin-bottom: 0;
+}
+
+hr {
+      width: 100%;
+      height: 2px;
+      background-color: var(--border-color);
+      border: none;
+      border-radius: 2px;
+}
+
+.mode-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 1rem;
+}
+
+.mode-buttons button {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: white;
+}
+
+.mode-buttons button[data-mode="work"] {
+      background-color: var(--work-color);
+}
+
+.mode-buttons button[data-mode="short"] {
+      background-color: var(--short-break-color);
+}
+
+.mode-buttons button[data-mode="long"] {
+      background-color: var(--long-break-color);
+}
+
+.mode-buttons button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-light);
+}
+
+.mode-buttons .active {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-medium);
+}
+
+/*Progress Ring*/
+    .timer-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem 0;
+}
+
+.progress-ring {
+      position: absolute;
+}
+
+.progress-ring__background {
+      opacity: 0.3;
+}
+
+.progress-ring__circle {
+      transition: stroke-dashoffset 1s linear;
+}
+
+.timer {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: var(--primary-text);
+      font-variant-numeric: tabular-nums;
+      z-index: 1;
+}
+
+.button-wrapper {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+}
+
+.button-wrapper button {
+      padding: 12px 28px;
+      border-radius: 20px;
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: white;
+      transition: all 0.3s ease;
+}
+
+.button-wrapper button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-light);
+}
+
+#start {
+      background-color: var(--start-color);
+}
+
+#stop {
+      background-color: var(--stop-color);
+}
+
+#reset {
+      background-color: var(--reset-color);
+}
+
+.right-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+}
+
+/* Todo Section */
+    .todo-section {
+      flex: 1;
+      background-color: var(--card-color);
+      border-radius: 24px;
+      padding: 2.5rem;
+      box-shadow: var(--shadow-medium);
+      border: 1px solid var(--border-color);
+}
+
+.todo-section h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary-text);
+      margin-bottom: 2rem;
+      text-align: center;
+}
+
+.wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      height: 100%;
+}
+
+form {
+      display: flex;
+      gap: 1rem;
+}
+
+#todo-input {
+      flex: 1;
+      padding: 16px 20px;
+      border: 2px solid var(--border-color);
+      border-radius: 15px;
+      font-size: 1rem;
+      background-color: var(--card-color);
+      color: var(--primary-text);
+      transition: border-color 0.3s ease;
+}
+
+#todo-input:focus {
+      outline: none;
+      border-color: var(--add-button-color);
+}
+
+#todo-input::placeholder {
+      color: var(--placeholder-text);
+}
+
+#add-button {
+      background-color: var(--add-button-color);
+      color: white;
+      border: none;
+      border-radius: 15px;
+      padding: 16px 32px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+}
+
+#add-button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-light);
+}
+
+ul#todo-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      flex-grow: 1;
+      overflow-y: auto;
+      max-height: 300px;
+}
+
+.todo {
+      background-color: var(--card-color);
+      border: 2px solid var(--border-color);
+      border-radius: 15px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: all 0.3s ease;
+}
+
+.todo:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-light);
+}
+
+.todo-text {
+      flex-grow: 1;
+      font-size: 1rem;
+      color: var(--primary-text);
+      font-weight: 500;
+}
+
+input[type="checkbox"] {
+      display: none;
+}
+
+.custom-checkbox {
+      width: 24px;
+      height: 24px;
+      border: 3px solid;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+}
+
+.custom-checkbox::after {
+      content: '✓';
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      opacity: 0;
+      transform: scale(0);
+      transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked ~ .custom-checkbox::after {
+      opacity: 1;
+      transform: scale(1);
+}
+
+input[type="checkbox"]:checked ~ .todo-text {
+      text-decoration: line-through;
+      opacity: 0.6;
+}
+
+.delete-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      font-size: 18px;
+      color: var(--stop-color);
+      transition: all 0.3s ease;
+}
+
+.delete-button:hover {
+      transform: scale(1.2);
+}
+
+.delete-button::before {
+      content: '🗑️';
+}
+
+/* Notes Section */
+.notes-container {
+      background-color: var(--card-color);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: var(--shadow-medium);
+      border: 1px solid var(--border-color);
+      min-height: 200px;
+}
+
+.notes-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary-text);
+      margin-bottom: 1rem;
+      text-align: center;
+}
+
+#notes-textarea {
+      width: 100%;
+      min-height: 120px;
+      padding: 16px 20px;
+      border: 2px solid var(--border-color);
+      border-radius: 15px;
+      font-size: 1rem;
+      font-family: inherit;
+      background-color: var(--card-color);
+      color: var(--primary-text);
+      resize: vertical;
+      transition: border-color 0.3s ease;
+}
+
+#notes-textarea:focus {
+      outline: none;
+      border-color: var(--work-color);
+}
+
+#notes-textarea::placeholder {
+      color: var(--placeholder-text);
+}
+
+/* Instructions Section */
+.instruction {
+      background-color: var(--primary-text);
+      color: var(--card-color);
+      padding: 3rem 2rem;
+      margin-top: 3rem;
+      border-radius: 0;
+}
+
+.instruction h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+      letter-spacing: 1px;
+}
+
+.instruction-steps {
+      max-width: 800px;
+      margin: 0 auto;
+}
+
+.instruction-steps p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      padding-left: 1rem;
+      font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+      .dashboard-container {
+        flex-direction: column;
+        gap: 2rem;
+      }
+      
+      .right-section {
+        flex-direction: row;
+        gap: 2rem;
+      }
+}
+
+@media (max-width: 768px) {
+  .logo {
+        font-size: 2rem;
+  }
+      
+  .dashboard-container {
+        padding: 0 1rem;
+        gap: 1.5rem;
+  }
+      
+  .right-section {
+        flex-direction: column;
+        gap: 1.5rem;
+  }
+      
+  .container,
+      .todo-section,
+      .notes-container {
+        padding: 2rem 1.5rem;
+  }
+      
+  .timer {
+        font-size: 2.5rem;
+  }
+      
+  .title,
+      .todo-section h1,
+      .notes-title {
+        font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .mode-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .mode-buttons button {
+    flex: 1 1 48%;
+  }
+
+  .mode-buttons button:nth-child(1) {
+    flex: 1 1 100%;
+  }
+
+  
+  .button-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .button-wrapper button {
+    flex: 1 1 48%;
+  }
+
+  .button-wrapper button:nth-child(1) {
+    flex: 1 1 100%;
+  }
+
+  
+  form {
+    flex-direction: column;
+  }
+
+  #add-button {
+    width: 100%;
+  }
+
+  .mode-buttons,
+  .button-wrapper {
+    width: 100%;
+  }
+}
