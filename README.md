@@ -1,5 +1,10 @@
 # WORKSTATION 🧠⏱️📝
 
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+[![Made with HTML5](https://img.shields.io/badge/HTML5-%3C%2F%3E-orange)]()
+[![Made with JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)]()
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue)](https://www.codedex.io/QCjWPkejJpj9X8Sxb0Pt/live)
+
 **WORKSTATION** is a productivity dashboard web app that helps you stay focused and organized. It combines a Pomodoro timer, a task-based to-do list, and a distraction-catching notes section — all in a single, clean interface.
 
 ---
