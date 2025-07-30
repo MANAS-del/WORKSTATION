@@ -11,7 +11,7 @@
 ## 🚀 Live Demo
 
 🎯 Try the live version hosted on Codedex:  
-👉 [WORKSTATION on Codedex](https://www.codedex.io/QCjWPkejJpj9X8Sxb0Pt/live)
+👉 [WORKSTATION](https://www.codedex.io/QCjWPkejJpj9X8Sxb0Pt/live)
 
 
 
