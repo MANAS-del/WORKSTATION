@@ -58,3 +58,10 @@ Feel free to fork, star, or contribute!
 ## ⭐️ Show Your Support
 
 If you found this useful, give it a ⭐ on GitHub — it really helps!
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
+
